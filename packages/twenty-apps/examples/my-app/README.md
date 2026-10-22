@@ -12,6 +12,29 @@ A Twenty application that adds standalone pages to the workspace navigation: Abo
 
 Setup instructions live in [SETUP.md](SETUP.md).
 
+## Pages
+
+Each page is made of three files in `src/`, plus identifiers in `src/constants/universal-identifiers.ts`:
+
+| Page | Component | Layout | Menu item |
+| --- | --- | --- | --- |
+| Main | `front-components/main-page.tsx` | `page-layouts/main-page.page-layout.ts` | `navigation-menu-items/main-page.navigation-menu-item.ts` |
+| About | `front-components/about-page.tsx` | `page-layouts/about-page.page-layout.ts` | `navigation-menu-items/about-page.navigation-menu-item.ts` |
+| Help | `front-components/help-page.tsx` | `page-layouts/help-page.page-layout.ts` | `navigation-menu-items/help-page.navigation-menu-item.ts` |
+| Contact | `front-components/contact-page.tsx` | `page-layouts/contact-page.page-layout.ts` | `navigation-menu-items/contact-page.navigation-menu-item.ts` |
+| FAQ | `front-components/faq-page.tsx` | `page-layouts/faq-page.page-layout.ts` | `navigation-menu-items/faq-page.navigation-menu-item.ts` |
+
+To add a page, copy an existing trio, give it new identifiers and rename the exports.
+
+## Syncing with a Twenty instance
+
+```bash
+yarn twenty remote:add --url <instance-url> --api-key <key> --as <name>
+yarn twenty plan    # preview changes
+yarn twenty apply   # apply them once
+yarn twenty dev     # or watch and sync continuously
+```
+
 ## Publishing
 
 The `Publish` workflow (`.github/workflows/publish.yml`) publishes the app to npm with provenance using [npm trusted publishing](https://docs.npmjs.com/trusted-publishers). To publish:
