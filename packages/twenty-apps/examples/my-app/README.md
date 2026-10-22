@@ -1,14 +1,12 @@
 # My Twenty App
 
-Describe your app in one or two sentences.
+A Twenty application that adds standalone pages to the workspace navigation: About, Help, Contact and FAQ.
 
 ## Features
 
-List the top things your app does, for example:
-
-- Feature one
-- Feature two
-- Feature three
+- A main page with links to the Twenty apps documentation
+- About, Help, Contact and FAQ pages, each a front component rendered in a standalone page layout
+- A health check logic function
 
 ## Getting started
 
